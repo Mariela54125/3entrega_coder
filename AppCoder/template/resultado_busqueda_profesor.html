@@ -1,0 +1,14 @@
+#{% extends "padre.html" %}
+{% load static %}
+
+{% block contenido %}
+    
+   <h2>Profesores</h2>
+    <ul>
+        {% for profesor in profesores %}
+        <li>Nombre: {{ profesor.nombre }}</li>
+        <li>Apellido: {{ profesor.apellido }}</li>
+        <li>dni: {{ profesor.dni }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

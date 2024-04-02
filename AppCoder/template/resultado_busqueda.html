@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block contenido %}  
+  
+    {% if cursos %}
+        <ul>
+        {% for curso in cursos %}
+            <li>Nombre: {{curso.nombre}}</li>
+            <li>Camada: {{curso.camada}}</li>
+
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron cursos con ese nombre</p>
+    {% endif %}
+
+
+{% endblock %}
